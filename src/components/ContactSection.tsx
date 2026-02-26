@@ -53,7 +53,7 @@ export default function ContactSection() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 max-w-5xl mx-auto">
                     {/* Contact form */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -141,7 +141,7 @@ export default function ContactSection() {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="flex flex-col justify-center"
                     >
-                        <div className="p-8 rounded-2xl border border-[var(--border-color)]
+                        <div className="p-5 sm:p-8 rounded-2xl border border-[var(--border-color)]
               bg-[var(--bg-secondary)]">
                             <h4 className="text-xl font-bold text-[var(--text-primary)] mb-2">
                                 Let&apos;s connect
@@ -165,7 +165,7 @@ export default function ContactSection() {
                                         </div>
                                         <div>
                                             <div className="text-sm font-medium text-[var(--text-primary)]">{label}</div>
-                                            <div className="text-xs text-[var(--text-secondary)]">
+                                            <div className="text-xs text-[var(--text-secondary)] break-all">
                                                 {handle}
                                             </div>
                                         </div>

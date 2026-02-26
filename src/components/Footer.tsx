@@ -17,8 +17,11 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Logo & copyright */}
                     <div className="text-center md:text-left">
-                        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-lg font-bold gradient-text">
-                            &lt;Portfolio /&gt;
+                        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="inline-flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-xl animated-gradient flex items-center justify-center shadow-md shadow-primary-500/25 shrink-0">
+                                <span className="text-xs font-black text-white tracking-tight">CU</span>
+                            </div>
+                            <span className="text-base font-bold gradient-text">chidozie</span>
                         </a>
                         <p className="text-sm text-[var(--text-secondary)] mt-1 flex items-center gap-1 justify-center md:justify-start">
                             Made with <Heart size={14} className="text-accent-500 fill-accent-500" /> &copy; {new Date().getFullYear()} Chidozie Uwakwe

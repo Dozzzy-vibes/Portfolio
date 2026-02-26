@@ -46,10 +46,13 @@ export default function Navbar() {
                     <motion.a
                         href="#"
                         onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                        className="text-xl md:text-2xl font-bold gradient-text cursor-pointer"
+                        className="flex items-center gap-2.5 cursor-pointer"
                         whileHover={{ scale: 1.05 }}
                     >
-                        &lt;Portfolio /&gt;
+                        <div className="w-9 h-9 rounded-xl animated-gradient flex items-center justify-center shadow-lg shadow-primary-500/30 shrink-0">
+                            <span className="text-sm font-black text-white tracking-tight">CU</span>
+                        </div>
+                        <span className="text-lg font-bold gradient-text">chidozie</span>
                     </motion.a>
 
                     {/* Desktop Nav */}

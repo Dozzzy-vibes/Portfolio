@@ -10,7 +10,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-1/4 left-1/4 w-72 md:w-96 h-72 md:h-96 rounded-full bg-primary-500/20 blur-[100px] animate-float" />
                 <div className="absolute bottom-1/4 right-1/4 w-72 md:w-96 h-72 md:h-96 rounded-full bg-accent-500/20 blur-[100px] animate-float-delayed" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary-600/10 blur-[120px] animate-pulse-glow" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[400px] md:w-[500px] h-[280px] sm:h-[400px] md:h-[500px] rounded-full bg-primary-600/10 blur-[120px] animate-pulse-glow" />
                 {/* Grain texture for depth */}
                 <div
                     className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none"
@@ -52,7 +52,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.7 }}
-                        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight
+                        className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight
               text-[var(--text-primary)] mb-6"
                     >
                         Hi, I&apos;m{' '}

@@ -26,7 +26,7 @@ export default function AboutSection() {
                         transition={{ duration: 0.7 }}
                         className="relative"
                     >
-                        <div className="relative w-full aspect-square max-w-md mx-auto">
+                        <div className="relative w-full aspect-square max-w-xs sm:max-w-sm md:max-w-md mx-auto">
                             {/* Decorative elements */}
                             <div className="absolute -inset-4 rounded-2xl animated-gradient opacity-20 blur-xl" />
                             <div className="relative rounded-2xl overflow-hidden border-2 border-[var(--border-color)]">
@@ -43,7 +43,7 @@ export default function AboutSection() {
                             <motion.div
                                 animate={{ y: [0, -8, 0] }}
                                 transition={{ duration: 3, repeat: Infinity }}
-                                className="absolute -bottom-4 -right-4 px-4 py-2 rounded-xl glass glow text-sm font-semibold
+                                className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl glass glow text-xs sm:text-sm font-semibold
                   text-primary-400"
                             >
                                 🚀 Open to work
@@ -99,7 +99,7 @@ export default function AboutSection() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.7, delay: 0.4 }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-16 md:mt-20"
                 >
                     {stats.map(({ icon: Icon, value, label }, i) => (
                         <motion.div
@@ -107,7 +107,7 @@ export default function AboutSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={inView ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: 0.5 + i * 0.1 }}
-                            className="text-center p-6 rounded-2xl border border-[var(--border-color)]
+                            className="text-center p-4 md:p-6 rounded-2xl border border-[var(--border-color)]
                 bg-[var(--bg-secondary)] card-hover"
                         >
                             <Icon className="w-8 h-8 mx-auto mb-3 text-primary-400" />

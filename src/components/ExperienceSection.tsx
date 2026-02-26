@@ -113,7 +113,7 @@ export default function ExperienceSection() {
 
                             {/* Card */}
                             <div className={`ml-10 md:ml-0 md:w-1/2 ${i % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                                <div className="p-6 rounded-2xl border border-[var(--border-color)]
+                                <div className="p-4 sm:p-6 rounded-2xl border border-[var(--border-color)]
                   bg-[var(--bg-secondary)] card-hover">
                                     <div className="flex items-start justify-between mb-3">
                                         <div>
@@ -122,7 +122,7 @@ export default function ExperienceSection() {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center gap-4 text-xs text-[var(--text-secondary)] mb-4">
+                                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[var(--text-secondary)] mb-4">
                                         <span className="flex items-center gap-1">
                                             <Calendar size={12} /> {exp.period}
                                         </span>

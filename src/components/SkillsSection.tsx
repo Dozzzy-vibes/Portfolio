@@ -107,7 +107,7 @@ export default function SkillsSection() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={inView ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: catIdx * 0.15, duration: 0.6 }}
-                            className="p-6 md:p-8 rounded-2xl border border-[var(--border-color)]
+                            className="p-5 md:p-8 rounded-2xl border border-[var(--border-color)]
                 bg-[var(--bg-secondary)] card-hover"
                         >
                             <h4 className="text-lg font-semibold text-[var(--text-primary)] mb-6 pb-4
