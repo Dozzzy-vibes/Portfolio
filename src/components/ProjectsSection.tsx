@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -81,6 +81,13 @@ export default function ProjectsSection() {
 
     const filtered = active === 'All' ? projects : projects.filter(p => p.category === active);
 
+    const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+        const el = e.currentTarget;
+        const rect = el.getBoundingClientRect();
+        el.style.setProperty('--spotlight-x', `${e.clientX - rect.left}px`);
+        el.style.setProperty('--spotlight-y', `${e.clientY - rect.top}px`);
+    }, []);
+
     return (
         <section id="projects" className="py-24 md:py-32 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -110,7 +117,7 @@ export default function ProjectsSection() {
                         <button
                             key={f}
                             onClick={() => setActive(f)}
-                            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${active === f
+                            className={`px-5 py-2 rounded-full text-sm font-medium transition-[color,background-color,border-color,box-shadow] ${active === f
                                 ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/25'
                                 : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] bg-[var(--bg-secondary)] border border-[var(--border-color)] hover:border-primary-500/30'
                                 }`}
@@ -137,7 +144,8 @@ export default function ProjectsSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: i * 0.1, duration: 0.5 }}
                                 className="group relative rounded-2xl border border-[var(--border-color)]
-                  bg-[var(--bg-secondary)] overflow-hidden card-hover"
+                  bg-[var(--bg-secondary)] overflow-hidden card-hover spotlight-card"
+                                onMouseMove={handleMouseMove}
                             >
                                 {/* Card header with image */}
                                 <div className="relative h-52 overflow-hidden">

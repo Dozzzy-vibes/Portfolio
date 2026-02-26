@@ -74,7 +74,7 @@ export default function ContactSection() {
                                     className="w-full px-4 py-3 rounded-xl border border-[var(--border-color)]
                     bg-[var(--bg-secondary)] text-[var(--text-primary)]
                     focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
-                    transition-all placeholder:text-[var(--text-secondary)]/50"
+                    transition-[border-color,box-shadow] placeholder:text-[var(--text-secondary)]/50"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -91,7 +91,7 @@ export default function ContactSection() {
                                     className="w-full px-4 py-3 rounded-xl border border-[var(--border-color)]
                     bg-[var(--bg-secondary)] text-[var(--text-primary)]
                     focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
-                    transition-all placeholder:text-[var(--text-secondary)]/50"
+                    transition-[border-color,box-shadow] placeholder:text-[var(--text-secondary)]/50"
                                     placeholder="john@example.com"
                                 />
                             </div>
@@ -108,7 +108,7 @@ export default function ContactSection() {
                                     className="w-full px-4 py-3 rounded-xl border border-[var(--border-color)]
                     bg-[var(--bg-secondary)] text-[var(--text-primary)]
                     focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
-                    transition-all resize-none placeholder:text-[var(--text-secondary)]/50"
+                    transition-[border-color,box-shadow] resize-none placeholder:text-[var(--text-secondary)]/50"
                                     placeholder="Tell me about your project..."
                                 />
                             </div>
@@ -157,7 +157,7 @@ export default function ContactSection() {
                                         href={href}
                                         className={`flex items-center gap-4 p-3 rounded-xl
                       text-[var(--text-secondary)] ${color}
-                      hover:bg-primary-500/5 transition-all group`}
+                      hover:bg-primary-500/5 transition-[color,background-color] group`}
                                     >
                                         <div className="p-2.5 rounded-xl bg-primary-500/10 text-primary-400
                       group-hover:bg-primary-500/20 transition-colors">

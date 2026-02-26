@@ -6,11 +6,18 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 export default function HeroSection() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Animated background blobs */}
+            {/* Animated background blobs + grain */}
             <div className="absolute inset-0 -z-10">
                 <div className="absolute top-1/4 left-1/4 w-72 md:w-96 h-72 md:h-96 rounded-full bg-primary-500/20 blur-[100px] animate-float" />
                 <div className="absolute bottom-1/4 right-1/4 w-72 md:w-96 h-72 md:h-96 rounded-full bg-accent-500/20 blur-[100px] animate-float-delayed" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary-600/10 blur-[120px] animate-pulse-glow" />
+                {/* Grain texture for depth */}
+                <div
+                    className="absolute inset-0 opacity-[0.04] mix-blend-overlay pointer-events-none"
+                    style={{
+                        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+                    }}
+                />
             </div>
 
             {/* Grid overlay */}
@@ -87,7 +94,7 @@ export default function HeroSection() {
                             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                             className="px-8 py-3.5 rounded-xl font-semibold
                 border border-[var(--border-color)] text-[var(--text-primary)]
-                hover:bg-primary-500/10 hover:border-primary-500/30 transition-all"
+                hover:bg-primary-500/10 hover:border-primary-500/30 transition-[background-color,border-color]"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -113,7 +120,7 @@ export default function HeroSection() {
                                 aria-label={label}
                                 className="p-3 rounded-xl border border-[var(--border-color)]
                   text-[var(--text-secondary)] hover:text-primary-400
-                  hover:border-primary-500/30 hover:bg-primary-500/5 transition-all"
+                  hover:border-primary-500/30 hover:bg-primary-500/5 transition-[color,border-color,background-color]"
                                 whileHover={{ scale: 1.1, y: -2 }}
                                 whileTap={{ scale: 0.9 }}
                             >

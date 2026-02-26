@@ -17,7 +17,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Logo & copyright */}
                     <div className="text-center md:text-left">
-                        <a href="#" className="text-lg font-bold gradient-text">
+                        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-lg font-bold gradient-text">
                             &lt;Portfolio /&gt;
                         </a>
                         <p className="text-sm text-[var(--text-secondary)] mt-1 flex items-center gap-1 justify-center md:justify-start">
@@ -38,7 +38,7 @@ export default function Footer() {
                                 aria-label={label}
                                 className="p-2.5 rounded-xl border border-[var(--border-color)]
                   text-[var(--text-secondary)] hover:text-primary-400
-                  hover:border-primary-500/30 hover:bg-primary-500/5 transition-all"
+                  hover:border-primary-500/30 hover:bg-primary-500/5 transition-[color,border-color,background-color]"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
@@ -52,7 +52,7 @@ export default function Footer() {
                         onClick={scrollToTop}
                         className="p-3 rounded-xl border border-[var(--border-color)]
               text-[var(--text-secondary)] hover:text-primary-400
-              hover:border-primary-500/30 hover:bg-primary-500/5 transition-all"
+              hover:border-primary-500/30 hover:bg-primary-500/5 transition-[color,border-color,background-color]"
                         whileHover={{ scale: 1.1, y: -2 }}
                         whileTap={{ scale: 0.9 }}
                         aria-label="Scroll to top"
